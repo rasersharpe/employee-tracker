@@ -104,19 +104,16 @@ async function addEmployee() {
 
 async function updateEmployeeRole() {
   try {
-    // Fetch all employees
     const employeesResult = await pool.query(`
       SELECT role_id, CONCAT(first_name, ' ', last_name) AS name FROM employees
     `);
     const employees = employeesResult.rows;
 
-    // Fetch all roles
     const rolesResult = await pool.query(`
       SELECT role_id, title FROM roles
     `);
     const roles = rolesResult.rows;
 
-    // Prompt user to select an employee
     const { employeeId } = await inquirer.prompt([
       {
         type: "list",
@@ -129,7 +126,6 @@ async function updateEmployeeRole() {
       },
     ]);
 
-    // Prompt user to select a new role
     const { roleId } = await inquirer.prompt([
       {
         type: "list",
@@ -142,7 +138,6 @@ async function updateEmployeeRole() {
       },
     ]);
 
-    // Update the employee's role
     await pool.query(
       `
       UPDATE employees
