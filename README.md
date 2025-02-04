@@ -25,7 +25,7 @@ Then navigate to the src folder and run the command `node i` to install the requ
 
 Choose an action from the main menu and follow the prompts to add or update data.
 
-[Here is a link to a video on usage ](https://www.youtube.com/watch?v=RshoUxVKg_M)
+[Here is a link to a video on usage ](https://www.youtube.com/watch?v=vEHAd9S9fZs)
 
 ## Collaborators
 
